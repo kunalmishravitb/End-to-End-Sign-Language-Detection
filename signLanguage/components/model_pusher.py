@@ -1,3 +1,4 @@
+'''
 import sys
 from signLanguage.configuration.s3_operations import S3Operation
 from signLanguage.entity.artifacts_entity import (
@@ -50,3 +51,4 @@ class ModelPusher:
 
         except Exception as e:
             raise SignException(e, sys) from e
+'''

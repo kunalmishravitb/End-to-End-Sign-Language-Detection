@@ -2,11 +2,13 @@ import sys,os
 from signLanguage.pipeline.training_pipeline import TrainPipeline
 #obj = TrainPipeline()
 #obj.run_pipeline()
+
 from signLanguage.exception import SignException
 from signLanguage.utils.main_utils import decodeImage, encodeImageIntoBase64
 from flask import Flask, request, jsonify, render_template, Response
 from flask_cors import CORS, cross_origin
 from signLanguage.constant.application import APP_HOST, APP_PORT
+
 
 
 
@@ -79,5 +81,6 @@ def predictLive():
 
 if __name__ == "__main__":
     clApp = ClientApp()
+    app.debug = True
     app.run(host=APP_HOST, port=APP_PORT)
 

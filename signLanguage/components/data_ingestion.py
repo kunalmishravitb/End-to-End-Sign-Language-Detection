@@ -9,6 +9,8 @@ from signLanguage.entity.artifacts_entity import DataIngestionArtifact
 
 
 
+
+
 class DataIngestion:
     def __init__(self, data_ingestion_config: DataIngestionConfig = DataIngestionConfig()):
         try:

@@ -15,7 +15,11 @@ class TrainingPipelineConfig:
 
 
 
+
+
 training_pipeline_config:TrainingPipelineConfig = TrainingPipelineConfig() 
+
+
 
 
 
@@ -59,8 +63,9 @@ class ModelTrainerConfig:
     batch_size = MODEL_TRAINER_BATCH_SIZE
 
 
-
+'''
 @dataclass
 class ModelPusherConfig:
     BUCKET_NAME: str = BUCKET_NAME
     S3_MODEL_KEY_PATH: str = S3_MODEL_NAME
+'''

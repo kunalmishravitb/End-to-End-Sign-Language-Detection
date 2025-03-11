@@ -7,16 +7,17 @@ from signLanguage.entity.config_entity import ModelTrainerConfig
 from signLanguage.entity.artifacts_entity import ModelTrainerArtifact
 
 
+
+
+
+
 class ModelTrainer:
-    def __init__(
-        self,
-        model_trainer_config: ModelTrainerConfig,
-    ):
+    def __init__(self, model_trainer_config: ModelTrainerConfig):
         self.model_trainer_config = model_trainer_config
 
 
     
-    def initiate_model_trainer(self,) -> ModelTrainerArtifact:
+    def initiate_model_trainer(self) -> ModelTrainerArtifact:
         logging.info("Entered initiate_model_trainer method of ModelTrainer class")
 
         try:
@@ -48,9 +49,7 @@ class ModelTrainer:
             os.system("rm -rf test")
             os.system("rm -rf data.yaml")
 
-            model_trainer_artifact = ModelTrainerArtifact(
-                trained_model_file_path="yolov5/best.pt",
-            )
+            model_trainer_artifact = ModelTrainerArtifact(trained_model_file_path="yolov5/best.pt")
 
             logging.info("Exited initiate_model_trainer method of ModelTrainer class")
             logging.info(f"Model trainer artifact: {model_trainer_artifact}")

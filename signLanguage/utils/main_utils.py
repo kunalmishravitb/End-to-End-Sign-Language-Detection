@@ -22,6 +22,8 @@ def read_yaml_file(file_path: str) -> dict:
         raise SignException(e, sys) from e
     
 
+
+
 def write_yaml_file(file_path: str, content: object, replace: bool = False) -> None:
     try:
         if replace:
@@ -40,6 +42,8 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
 
 
 
+
+
 def decodeImage(imgstring, fileName):
     imgdata = base64.b64decode(imgstring)
     with open("./data/" + fileName, 'wb') as f:
@@ -50,3 +54,5 @@ def decodeImage(imgstring, fileName):
 def encodeImageIntoBase64(croppedImagePath):
     with open(croppedImagePath, "rb") as f:
         return base64.b64encode(f.read())
+
+
